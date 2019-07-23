@@ -1421,9 +1421,9 @@
 
 
       if (params.centeredSlides) {
-        slidePosition = slidePosition + (slideSize / 2) + (prevSlideSize / 2) + spaceBetween;
+        slidePosition = slidePosition + prevSlideSize + spaceBetween;
         if (prevSlideSize === 0 && i !== 0) { slidePosition = slidePosition - (swiperSize / 2) - spaceBetween; }
-        if (i === 0) { slidePosition = slidePosition - (swiperSize / 2) - spaceBetween; }
+        if (i === 0) { slidePosition = 0 }
         if (Math.abs(slidePosition) < 1 / 1000) { slidePosition = 0; }
         if (params.roundLengths) { slidePosition = Math.floor(slidePosition); }
         if ((index) % params.slidesPerGroup === 0) { snapGrid.push(slidePosition); }
